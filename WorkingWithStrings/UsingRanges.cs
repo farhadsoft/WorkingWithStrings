@@ -21,9 +21,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutFirstChar(string str)
         {
-            // TODO #4-1. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[1..];
         }
 
         /// <summary>
@@ -31,9 +29,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutTwoFirstChars(string str)
         {
-            // TODO #4-2. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[2..];
         }
 
         /// <summary>
@@ -41,9 +37,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutThreeFirstChars(string str)
         {
-            // TODO #4-3. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[3..];
         }
 
         /// <summary>
@@ -51,9 +45,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutLastChar(string str)
         {
-            // TODO #4-4. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[..^1];
         }
 
         /// <summary>
@@ -61,9 +53,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutTwoLastChars(string str)
         {
-            // TODO #4-5. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[..^2];
         }
 
         /// <summary>
@@ -71,9 +61,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutThreeLastChars(string str)
         {
-            // TODO #4-6. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[..^3];
         }
 
         /// <summary>
@@ -81,9 +69,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutFirstAndLastChars(string str)
         {
-            // TODO #4-7. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[1..^1];
         }
 
         /// <summary>
@@ -91,9 +77,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutTwoFirstAndTwoLastChars(string str)
         {
-            // TODO #4-8. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[2..^2];
         }
 
         /// <summary>
@@ -101,9 +85,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringWithoutThreeFirstAndThreeLastChars(string str)
         {
-            // TODO #4-9. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[3..^3];
         }
 
         /// <summary>
@@ -111,8 +93,10 @@ namespace WorkingWithStrings
         /// </summary>
         public static void GetProductionCodeDetails(string productionCode, out string regionCode, out string locationCode, out string dateCode, out string factoryCode)
         {
-            // TODO #4-10. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            regionCode = productionCode[..1];
+            locationCode = productionCode[3..5];
+            dateCode = productionCode[7..10];
+            factoryCode = productionCode[^4..];
         }
 
         /// <summary>
@@ -120,8 +104,10 @@ namespace WorkingWithStrings
         /// </summary>
         public static void GetSerialNumberDetails(string serialNumber, out string countryCode, out string manufacturerCode, out string factoryCode, out string stationCode)
         {
-            // TODO #4-11. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            countryCode = serialNumber[^9..^8];
+            manufacturerCode = serialNumber[^8..^6];
+            factoryCode = serialNumber[^5..^1];
+            stationCode = serialNumber[^1..];
         }
     }
 }
